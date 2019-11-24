@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <script type="text/javascript" src="{% static 'fusioncharts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'fusioncharts.charts.js' %}"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'fusioncharts.theme.candy.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'style.css'%}" >
+    <meta charset="UTF-8">
+    <title>Campus Energy and Demand</title>
+</head>
+<body>
+    <div class="title">IIITH Campus Energy and Demand Dashboard</div><br/>
+    <div class="chart-container">
+        <div id="temp-container" class="container">{{ temp_output|safe }}</div>
+        <div id="hum-container" class="container">{{ hum_output|safe }}</div>
+        <div id="energy-1-container" class="container">{{ e1_output|safe }}</div>
+        <div id="energy-2-container" class="container">{{ e2_output|safe }}</div>
+        <div id="energy-3-container" class="container">{{ e3_output|safe }}</div>
+        <div id="energy-4-container" class="container">{{ e4_output|safe }}</div>
+        <div id="energy-5-container" class="container">{{ e5_output|safe }}</div>
+        <div id="energy-temp-container" class="container">{{ et_output|safe }}</div>
+        <div id="energy-hum-container" class="container">{{ eh_output|safe }}</div>
+    </div>
+</body>
+</html>
